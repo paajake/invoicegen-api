@@ -4,12 +4,6 @@ spring:
     username: ${JDBC_DATABASE_USERNAME}
     password: ${JDBC_DATABASE_PASSWORD}
 
-    tomcat:
-      initial-size: 7
-      max-wait: 20000
-      max-idle: 2
-      default-auto-commit: true
-
   jpa:
     properties:
       hibernate:
