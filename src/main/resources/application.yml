@@ -3,6 +3,7 @@ spring:
     url: &dbURL jdbc:mysql://localhost:3306/myDB
     username: &dbUser
     password: &dbPassword
+    maxActive: 5
   jpa:
     properties:
       hibernate:
