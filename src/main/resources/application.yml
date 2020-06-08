@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: &dbURL jdbc:mysql://localhost:3306/myDB
-    username: &dbUser
-    password: &dbPassword
+    url: ${JDBC_DATABASE_URL}
+    username: ${JDBC_DATABASE_USERNAME}
+    password: ${JDBC_DATABASE_PASSWORD}
     maxActive: 5
   jpa:
     properties:
