@@ -3,7 +3,13 @@ spring:
     url: ${JDBC_DATABASE_URL}
     username: ${JDBC_DATABASE_USERNAME}
     password: ${JDBC_DATABASE_PASSWORD}
-    maxActive: 5
+
+    tomcat:
+      initial-size: 7
+      max-wait: 20000
+      max-idle: 2
+      default-auto-commit: true
+
   jpa:
     properties:
       hibernate:
