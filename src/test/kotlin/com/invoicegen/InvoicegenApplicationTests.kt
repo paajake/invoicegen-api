@@ -8,6 +8,7 @@ class InvoicegenApplicationTests {
 
 	@Test
 	fun contextLoads() {
+		assert(true)
 	}
 
 }

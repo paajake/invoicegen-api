@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/paajake/invoicegen-api.svg?branch=master)](https://travis-ci.org/paajake/invoicegen-api)
+[![CodeFactor](https://www.codefactor.io/repository/github/paajake/invoicegen-api/badge)](https://www.codefactor.io/repository/github/paajake/invoicegen-api)
+[![codecov](https://codecov.io/gh/paajake/invoicegen-api/branch/master/graph/badge.svg)](https://codecov.io/gh/paajake/invoicegen-api)
+
 # Getting Started
 
 ### Reference Documentation
