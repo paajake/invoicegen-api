@@ -41,6 +41,11 @@ tasks.withType<Test> {
 
 tasks.jacocoTestReport {
 	dependsOn(tasks.test) // tests are required to run before generating the report
+	reports {
+		xml.isEnabled = true
+		csv.isEnabled = false
+		html.destination = file("${buildDir}/jacocoHtml")
+	}
 }
 
 tasks.withType<KotlinCompile> {
