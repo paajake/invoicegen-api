@@ -1,12 +1,11 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:myDb;DB_CLOSE_DELAY=-1
-    driverClassName: org.h2.Driver
-    username:
-    password:
+    url: &dbURL jdbc:mysql://localhost:3306/myDB
+    username: &dbUser
+    password: &dbPassword
   jpa:
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.H2Dialect
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
