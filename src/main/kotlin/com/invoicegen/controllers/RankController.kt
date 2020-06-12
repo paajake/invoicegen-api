@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import javax.validation.Valid
 
-@Api(value = "Rank or Level of Lawyers and related information resource", tags = ["Rank"])
+@Api(value = "Rank or Level of Lawyers and related information resource", tags = ["Ranks"])
 @RestController
 @RequestMapping("/api/ranks")
 class RankController (private val rankService: RankService) {

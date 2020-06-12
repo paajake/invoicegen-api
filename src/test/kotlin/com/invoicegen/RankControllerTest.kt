@@ -92,7 +92,7 @@ class RankControllerTest(@Autowired val restTemplate: TestRestTemplate) : Abstra
 		updatedRank = Rank(rate = BigDecimal("5000.3"))
 
 		restTemplate.put("$baseUrl/2", updatedRank)
-		entity = restTemplate.getForEntity<String>("$baseUrl/2")
+		entity = restTemplate.getForEntity("$baseUrl/2")
 		assertThat(entity.statusCode).isEqualTo(HttpStatus.OK)
 		assertThat(entity.hasBody())
 		assertThat(entity.body).contains("Special Litigator", "5000.3")
@@ -100,7 +100,7 @@ class RankControllerTest(@Autowired val restTemplate: TestRestTemplate) : Abstra
 		updatedRank = Rank(name = "Special Prosecutor", rate = BigDecimal("9000.13"))
 
 		restTemplate.put("$baseUrl/2", updatedRank)
-		entity = restTemplate.getForEntity<String>("$baseUrl/2")
+		entity = restTemplate.getForEntity("$baseUrl/2")
 		assertThat(entity.statusCode).isEqualTo(HttpStatus.OK)
 		assertThat(entity.hasBody())
 		assertThat(entity.body).contains("Special Prosecutor", "9000.13")
@@ -113,7 +113,7 @@ class RankControllerTest(@Autowired val restTemplate: TestRestTemplate) : Abstra
 		restTemplate.delete("$baseUrl/2")
 		var entity = restTemplate.getForEntity<String>("$baseUrl/2")
 		assertThat(entity.statusCode).isEqualTo(HttpStatus.NOT_FOUND)
-		entity = restTemplate.getForEntity<String>(baseUrl)
+		entity = restTemplate.getForEntity(baseUrl)
 		assertThat(entity.hasBody())
 		assertThat(entity.body).contains(requestData[0].name, requestData[0].rate.toString())
 		assertThat(entity.body).doesNotContain(requestData[1].name, requestData[1].rate.toString())
